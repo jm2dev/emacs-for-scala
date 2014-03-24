@@ -285,3 +285,8 @@
 (global-auto-revert-mode 1)
 (global-set-key (kbd "s-j") 'dired-jump)
 
+;; jm gui settings
+(add-to-list 'default-frame-alist '(font . "Source Code Pro 12"))
+;; believe me, you don't need menubar, toolbar nor scrollbar
+(dolist (mode '(menu-bar-mode tool-bar-mode scroll-bar-mode))
+  (when (fboundp mode) (funcall mode -1)))
